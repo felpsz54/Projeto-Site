@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Lucro Empresarial</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Análise de Lucro Empresarial</h1>
+            <p class="subtitle">Uma análise abrangente das estratégias e desempenho financeiro das principais empresas globais</p>
+        </div>
+    </header>
+   
+    <div class="nav-container">
+        <nav>
+            <a href="#" class="nav-item">Visão Geral</a>
+            <a href="#" class="nav-item">Empresas</a>
+            <a href="#" class="nav-item">Comparativos</a>
+            <a href="#" class="nav-item">Estratégias</a>
+            <a href="#" class="nav-item">Notícias</a>
+            <a href="#" class="nav-item">Contato</a>
+        </nav>
+    </div>
+   
+    <div class="container">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">USD 101,8 bi</div>
+                <div class="metric-label">Lucro Líquido Microsoft</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">USD 7,535 bi</div>
+                <div class="metric-label">Lucro Líquido Sony</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">+66,1%</div>
+                <div class="metric-label">Crescimento FromSoftware</div>
+            </div>
+        </div>
+       
+        <div class="dashboard">
+            <!-- Microsoft -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="company-name">
+                        <span class="company-icon"><i class="fab fa-microsoft"></i></span>
+                        Microsoft
+                    </h2>
+                    <p class="ceo-info">CEO: Satya Nadella (desde 2014)</p>
+                </div>
+               
+                <div class="chart-container">
+                    <canvas id="microsoftChart"></canvas>
+                </div>
+               
+                <div class="financial-highlights">
+                    <div class="highlight">
+                        <div class="highlight-value">USD 101,8 bi</div>
+                        <div class="highlight-label">Lucro Líquido <span class="positive">(+16%)</span></div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-value">USD 281,7 bi</div>
+                        <div class="highlight-label">Receita Anual <span class="positive">(+15%)</span></div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-value">USD 76,4 bi</div>
+                        <div class="highlight-label">Receita 4º Trimestre <span class="positive">(+18%)</span></div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-value">USD 27,2 bi</div>
+                        <div class="highlight-label">Lucro 4º Trimestre <span class="positive">(+24%)</span></div>
+                    </div>
+                </div>
+               
+                <div class="info-section">
+                    <h3 class="section-title">Estratégia de Lucro</h3>
+                    <p>Forte crescimento em nuvem e IA, com cultura de empatia e colaboração, mas com controles mais rígidos de performance. A empresa retornou USD 9,4 bilhões aos acionistas em dividendos e recompra de ações.</p>
+                </div>
+               
+                <div class="info-section">
+                    <h3 class="section-title">Cultura Organizacional</h3>
+                    <p>O CEO Satya Nadella tem promovido uma cultura baseada em empatia, abertura, colaboração e renovação constante — o oposto da antiga ênfase em desempenho rígido — incentivando uma mentalidade de "desafiador" e valorizando perspectivas diversas.</p>
+                </div>
+            </div>
+           
+            <!-- Sony -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="company-name">
+                        <span class="company-icon"><i class="fas fa-tv"></i></span>
+                        Sony
+                    </h2>
+                    <p class="ceo-info">CEO: Hiroki Totoki</p>
+                </div>
+               
+                <div class="chart-container">
+                    <canvas id="sonyChart"></canvas>
+                </div>
+               
+                <div class="financial-highlights">
+                    <div class="highlight">
+                        <div class="highlight-value">USD 7,535 bi</div>
+                        <div class="highlight-label">Lucro Líquido <span class="positive">(+18%)</span></div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-value">USD 9,287 bi</div>
+                        <div class="highlight-label">Lucro Operacional <span class="positive">(+11.35%)</span></div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-value">USD 6,6 bi</div>
+                        <div class="highlight-label">Previsão 2026 <span class="negative">(-13%)</span></div>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-value">1,14 tri ¥</div>
+                        <div class="highlight-label">Lucro Líquido em Ienes</div>
+                    </div>
+                </div>
+               
+                <div class="info-section">
+                    <h3 class="section-title">Estratégia de Lucro</h3>
+                    <p>Foca na "Creative Entertainment Vision" com colaboração entre áreas e "boundary spanners" para gerar valor e emoção (Kando).</p>
+                </div>
+               
+                <div class="info-section">
+                    <h3 class="section-title">Cultura Organizacional</h3>
+                    <p>Sob a liderança do CEO Hiroki Totoki, a cultura da empresa é guiada pela "Creative Entertainment Vision", que valoriza colaboração entre diferentes áreas e pessoas, e a noção de "boundary spanners" — indivíduos que atravessam barreiras organizacionais para gerar valor e emoção.</p>
+                </div>
+            </div>
+        </div>
+       
+        <!-- FromSoftware -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="company-name">
+                    <span class="company-icon"><i class="fas fa-gamepad"></i></span>
+                    FromSoftware
+                </h2>
+            </div>
+           
+            <div class="chart-container">
+                <canvas id="fromsoftwareChart"></canvas>
+            </div>
+           
+            <div class="financial-highlights">
+                <div class="highlight">
+                    <div class="highlight-value">USD 160 mi</div>
+                    <div class="highlight-label">Receita <span class="positive">(+51.5%)</span></div>
+                </div>
+                <div class="highlight">
+                    <div class="highlight-value">USD 45 mi</div>
+                    <div class="highlight-label">Lucro Líquido <span class="positive">(+66.1%)</span></div>
+                </div>
+                <div class="highlight">
+                    <div class="highlight-value">USD 68 mi</div>
+                    <div class="highlight-label">Lucro Operacional <span class="positive">(+53.5%)</span></div>
+                </div>
+                <div class="highlight">
+                    <div class="highlight-value">+12%</div>
+                    <div class="highlight-label">Aumento Salarial 2024</div>
+                </div>
+            </div>
+           
+            <div class="info-section">
+                <h3 class="section-title">Estratégia de Lucro</h3>
+                <p>Valorização dos funcionários com aumento salarial de 12% em 2024, resultando em alto crescimento de receita e lucratividade. A empresa focou em lançamentos de sucesso e expansão de mercado.</p>
+            </div>
+        </div>
+       
+        <!-- Comparativo -->
+        <div class="comparison-section">
+            <h2 class="section-title">Comparativo entre Empresas</h2>
+           
+            <div class="tabs">
+                <div class="tab active" data-tab="revenue">Receita</div>
+                <div class="tab" data-tab="profit">Lucro Líquido</div>
+                <div class="tab" data-tab="growth">Crescimento</div>
+                <div class="tab" data-tab="efficiency">Eficiência</div>
+            </div>
+           
+            <div class="tab-content active" id="revenue-tab">
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+           
+            <div class="tab-content" id="profit-tab">
+                <div class="chart-container">
+                    <canvas id="profitChart"></canvas>
+                </div>
+            </div>
+           
+            <div class="tab-content" id="growth-tab">
+                <div class="chart-container">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+           
+            <div class="tab-content" id="efficiency-tab">
+                <div class="chart-container">
+                    <canvas id="efficiencyChart"></canvas>
+                </div>
+            </div>
+           
+            <div class="controls">
+                <button class="btn" id="barView">Visualização em Barras</button>
+                <button class="btn" id="lineView">Visualização em Linhas</button>
+                <button class="btn" id="downloadBtn">Exportar Dados</button>
+            </div>
+        </div>
+       
+        <!-- Estratégias -->
+        <div class="strategy-section">
+            <h2 class="section-title">Estratégias de Lucro por Empresa</h2>
+           
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h4><i class="fas fa-cloud"></i> Microsoft - Nuvem e IA</h4>
+                    <p>Foco em serviços de nuvem (Azure) e soluções de inteligência artificial, com investimentos massivos em pesquisa e desenvolvimento.</p>
+                </div>
+                <div class="strategy-card">
+                    <h4><i class="fas fa-users"></i> Microsoft - Cultura Organizacional</h4>
+                    <p>Mudança para cultura de empatia e colaboração, com sistema de performance mais rigoroso ("ManageRewards slider").</p>
+                </div>
+                <div class="strategy-card">
+                    <h4><i class="fas fa-paint-brush"></i> Sony - Entretenimento Criativo</h4>
+                    <p>Estratégia "Creative Entertainment Vision" com foco em boundary spanners para gerar valor e emoção (Kando).</p>
+                </div>
+                <div class="strategy-card">
+                    <h4><i class="fas fa-gamepad"></i> Sony - Diversificação</h4>
+                    <p>Portfólio diversificado em eletrônicos, jogos, música e entretenimento, com sinergia entre os segmentos.</p>
+                </div>
+                <div class="strategy-card">
+                    <h4><i class="fas fa-award"></i> FromSoftware - Qualidade Premium</h4>
+                    <p>Foco em jogos de alta qualidade e nicho, com valorização de funcionários e aumento salarial de 12% em 2024.</p>
+                </div>
+                <div class="strategy-card">
+                    <h4><i class="fas fa-globe"></i> FromSoftware - Expansão Global</h4>
+                    <p>Expansão agressiva para mercados internacionais com localização de produtos e parcerias estratégicas.</p>
+                </div>
+            </div>
+        </div>
+       
+        <!-- Notícias -->
+        <div class="news-section">
+            <h2 class="section-title">Últimas Notícias</h2>
+           
+            <div class="news-item">
+                <div class="news-date">15 de Julho, 2025</div>
+                <div class="news-title">Microsoft atinge USD 4,09 trilhões em valor de mercado</div>
+                <div class="news-content">Impulsionada por forte crescimento em cloud e IA, a Microsoft se consolida como uma das empresas mais valiosas do mundo.</div>
+            </div>
+           
+            <div class="news-item">
+                <div class="news-date">10 de Julho, 2025</div>
+                <div class="news-title">Sony revisa previsão de lucro para 2026</div>
+                <div class="news-content">Empresa projeta lucro líquido de 930 bilhões de ienes (~USD 6,6 bilhões) para o ano fiscal de 2026, um recuo de aproximadamente 13%.</div>
+            </div>
+           
+            <div class="news-item">
+                <div class="news-date">5 de Julho, 2025</div>
+                <div class="news-title">FromSoftware registra crescimento recorde de 66,1% no lucro líquido</div>
+                <div class="news-content">Com receita de USD 160 milhões, a empresa demonstra a eficácia de sua estratégia de valorização de funcionários.</div>
+            </div>
+        </div>
+       
+        <!-- Resumo do Mercado -->
+        <div class="market-summary">
+            <h2 class="section-title">Resumo do Mercado</h2>
+           
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="summary-value">USD 4,09 tri</div>
+                    <div class="summary-label">Valor de Mercado Microsoft</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">+18%</div>
+                    <div class="summary-label">Crescimento Sony</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">+66,1%</div>
+                    <div class="summary-label">Crescimento FromSoftware</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">USD 9,4 bi</div>
+                    <div class="summary-label">Retorno aos Acionistas Microsoft</div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre o Projeto</h3>
+                <p>Este site foi desenvolvido para análise educacional dos métodos de lucro empresarial, com foco em estratégias e desempenho financeiro.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Fontes de Dados</h3>
+                <p>Relatórios anuais, comunicados à imprensa e análises financeiras públicas das empresas estudadas.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Para mais informações, não entre em contato.</p>
+            </div>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.7;">&copy; 2025 Análise de Lucro Empresarial. Todos os direitos reservados.</p>
+    </footer>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuração de cores
+            const colors = {
+                microsoft: '#1d4e89',
+                sony: '#3a7ca5',
+                fromsoftware: '#5da0c6',
+                background: '#e6f0ff'
+            };
+           
+            // Dados para os gráficos
+            const financialData = {
+                microsoft: {
+                    revenue: [245, 263, 281.7],
+                    profit: [87.7, 94.3, 101.8],
+                    years: ['2023', '2024', '2025']
+                },
+                sony: {
+                    revenue: [68.5, 73.2, 78.5],
+                    profit: [6.4, 7.1, 7.8],
+                    years: ['2023', '2024', '2025']
+                },
+                fromsoftware: {
+                    revenue: [106, 152, 160],
+                    profit: [27, 38, 45],
+                    years: ['2023', '2024', '2025']
+                }
+            };
+           
+            // Gráfico da Microsoft
+            const microsoftCtx = document.getElementById('microsoftChart').getContext('2d');
+            new Chart(microsoftCtx, {
+                type: 'bar',
+                data: {
+                    labels: financialData.microsoft.years,
+                    datasets: [{
+                        label: 'Receita (USD bi)',
+                        data: financialData.microsoft.revenue,
+                        backgroundColor: colors.microsoft,
+                        borderColor: colors.microsoft,
+                        borderWidth: 1
+                    }, {
+                        label: 'Lucro Líquido (USD bi)',
+                        data: financialData.microsoft.profit,
+                        backgroundColor: colors.background,
+                        borderColor: colors.microsoft,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Desempenho Financeiro da Microsoft',
+                            color: colors.microsoft,
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                            ticks: { color: colors.microsoft }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: colors.microsoft }
+                        }
+                    }
+                }
+            });
+           
+            // Gráfico da Sony
+            const sonyCtx = document.getElementById('sonyChart').getContext('2d');
+            new Chart(sonyCtx, {
+                type: 'bar',
+                data: {
+                    labels: financialData.sony.years,
+                    datasets: [{
+                        label: 'Receita (USD bi)',
+                        data: financialData.sony.revenue,
+                        backgroundColor: colors.sony,
+                        borderColor: colors.sony,
+                        borderWidth: 1
+                    }, {
+                        label: 'Lucro Líquido (USD bi)',
+                        data: financialData.sony.profit,
+                        backgroundColor: colors.background,
+                        borderColor: colors.sony,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Desempenho Financeiro da Sony',
+                            color: colors.sony,
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                            ticks: { color: colors.sony }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: colors.sony }
+                        }
+                    }
+                }
+            });
+           
+            // Gráfico da FromSoftware
+            const fromsoftwareCtx = document.getElementById('fromsoftwareChart').getContext('2d');
+            new Chart(fromsoftwareCtx, {
+                type: 'bar',
+                data: {
+                    labels: financialData.fromsoftware.years,
+                    datasets: [{
+                        label: 'Receita (USD mi)',
+                        data: financialData.fromsoftware.revenue,
+                        backgroundColor: colors.fromsoftware,
+                        borderColor: colors.fromsoftware,
+                        borderWidth: 1
+                    }, {
+                        label: 'Lucro Líquido (USD mi)',
+                        data: financialData.fromsoftware.profit,
+                        backgroundColor: colors.background,
+                        borderColor: colors.fromsoftware,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Desempenho Financeiro da FromSoftware',
+                            color: colors.fromsoftware,
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                            ticks: { color: colors.fromsoftware }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: colors.fromsoftware }
+                        }
+                    }
+                }
+            });
+           
+            // Gráficos comparativos
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            const revenueChart = new Chart(revenueCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Microsoft', 'Sony', 'FromSoftware'],
+                    datasets: [{
+                        label: 'Receita 2025',
+                        data: [281.7, 78.5, 0.16],
+                        backgroundColor: [colors.microsoft, colors.sony, colors.fromsoftware],
+                        borderColor: [colors.microsoft, colors.sony, colors.fromsoftware],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparativo de Receita 2025 (USD bi/mi)',
+                            color: colors.microsoft,
+                            font: { size: 16 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' }
+                        }
+                    }
+                }
+            });
+           
+            const profitCtx = document.getElementById('profitChart').getContext('2d');
+            const profitChart = new Chart(profitCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Microsoft', 'Sony', 'FromSoftware'],
+                    datasets: [{
+                        label: 'Lucro Líquido 2025',
+                        data: [101.8, 7.8, 0.045],
+                        backgroundColor: [colors.microsoft, colors.sony, colors.fromsoftware],
+                        borderColor: [colors.microsoft, colors.sony, colors.fromsoftware],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparativo de Lucro Líquido 2025 (USD bi/mi)',
+                            color: colors.microsoft,
+                            font: { size: 16 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' }
+                        }
+                    }
+                }
+            });
+           
+            const growthCtx = document.getElementById('growthChart').getContext('2d');
+            const growthChart = new Chart(growthCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Microsoft', 'Sony', 'FromSoftware'],
+                    datasets: [{
+                        label: 'Crescimento do Lucro (%)',
+                        data: [16, 18, 66.1],
+                        backgroundColor: [colors.microsoft, colors.sony, colors.fromsoftware],
+                        borderColor: [colors.microsoft, colors.sony, colors.fromsoftware],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparativo de Crescimento do Lucro',
+                            color: colors.microsoft,
+                            font: { size: 16 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' }
+                        }
+                    }
+                }
+            });
+           
+            const efficiencyCtx = document.getElementById('efficiencyChart').getContext('2d');
+            const efficiencyChart = new Chart(efficiencyCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Microsoft', 'Sony', 'FromSoftware'],
+                    datasets: [{
+                        label: 'Margem de Lucro Líquido (%)',
+                        data: [36.1, 9.9, 28.1],
+                        backgroundColor: [colors.microsoft, colors.sony, colors.fromsoftware],
+                        borderColor: [colors.microsoft, colors.sony, colors.fromsoftware],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparativo de Eficiência (Margem de Lucro)',
+                            color: colors.microsoft,
+                            font: { size: 16 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' }
+                        }
+                    }
+                }
+            });
+           
+            // Controle de abas
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove a classe active de todas as abas
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    // Adiciona a classe active à aba clicada
+                    this.classList.add('active');
+                   
+                    // Esconde todo o conteúdo das abas
+                    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                    // Mostra o conteúdo correspondente
+                    document.getElementById(`${this.dataset.tab}-tab`).classList.add('active');
+                });
+            });
+           
+            // Controle de visualização
+            document.getElementById('barView').addEventListener('click', function() {
+                revenueChart.config.type = 'bar';
+                profitChart.config.type = 'bar';
+                growthChart.config.type = 'bar';
+                efficiencyChart.config.type = 'bar';
+                revenueChart.update();
+                profitChart.update();
+                growthChart.update();
+                efficiencyChart.update();
+            });
+           
+            document.getElementById('lineView').addEventListener('click', function() {
+                revenueChart.config.type = 'line';
+                profitChart.config.type = 'line';
+                growthChart.config.type = 'line';
+                efficiencyChart.config.type = 'line';
+                revenueChart.update();
+                profitChart.update();
+                growthChart.update();
+                efficiencyChart.update();
+            });
+           
+            // Simulação de exportação de dados
+            document.getElementById('downloadBtn').addEventListener('click', function() {
+                alert('Funcionalidade de exportação ativada! Em uma aplicação real, isso baixaria um arquivo com os dados.');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
